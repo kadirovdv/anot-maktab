@@ -1,145 +1,288 @@
-<div class="content">
-  <div class="container">
-    <nav>
-      <img src="/assets/img/savod_white.png" alt="" routerLink="/main" />
-      <div class="d-flex align-items-center">
-        <svg
-          width="19"
-          height="24"
-          viewBox="0 0 19 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M9.43039 11.6016C11.0322 11.6016 12.3308 10.303 12.3308 8.70117C12.3308 7.09933 11.0322 5.80078 9.43039 5.80078C7.82855 5.80078 6.53 7.09933 6.53 8.70117C6.53 10.303 7.82855 11.6016 9.43039 11.6016Z"
-            fill="#005533"
-          />
-          <path
-            d="M8.81447 23.4341C8.88858 23.5266 8.98253 23.6012 9.08937 23.6525C9.19621 23.7038 9.31321 23.7304 9.43172 23.7304C9.55024 23.7304 9.66724 23.7038 9.77408 23.6525C9.88091 23.6012 9.97486 23.5266 10.049 23.4341C10.069 23.4093 12.0729 20.9029 14.0478 17.8928C16.7584 13.7621 18.1326 10.6682 18.1326 8.70117C18.1326 3.90234 14.2303 0 9.43146 0C4.63263 0 0.730286 3.90234 0.730286 8.70117C0.730286 10.6697 2.10454 13.7637 4.81509 17.8928C6.78947 20.9029 8.79337 23.4093 8.81447 23.4341ZM9.4304 4.21875C10.3169 4.21875 11.1836 4.48164 11.9207 4.97417C12.6578 5.46671 13.2324 6.16677 13.5716 6.98582C13.9109 7.80488 13.9997 8.70614 13.8267 9.57565C13.6537 10.4452 13.2268 11.2438 12.6 11.8707C11.9731 12.4976 11.1744 12.9245 10.3049 13.0975C9.43537 13.2704 8.53411 13.1817 7.71505 12.8424C6.896 12.5031 6.19594 11.9286 5.70341 11.1915C5.21087 10.4543 4.94798 9.58771 4.94798 8.70117C4.94938 7.51279 5.42208 6.37348 6.26239 5.53316C7.10271 4.69285 8.24202 4.22015 9.4304 4.21875Z"
-            fill="#005533"
-          />
-        </svg>
-
-        <h5 class="mb-0">Toshkent</h5>
-      </div>
-    </nav>
-    <div class="w-80">
-      <h5 class="text-center mt-5">
-        VA NIHOYAT! ENDI SIZDA HAM ARAB TILIDAGI KITOBLARNI QIYINCHILIKLARSIZ
-        O’QISH IMKONIYATI BOR…
-      </h5>
-    </div>
-    <div class="row details">
+<app-navbar [whiteNavbar]="true"></app-navbar>
+<section>
+  <!-- [ngClass]="
+index === 0
+  ? 'section-success'
+  : index === 1
+  ? 'bg-secondary'
+  : index === 2
+  ? 'bg-success'
+  : index === 3
+  ? 'bg-danger'
+  : index === 4
+  ? 'bg-warning'
+  : 'bg-info'
+" -->
+  <div class="container" style="max-width: 1230px">
+    <div class="row">
       <div class="col-md-6">
-        <h3>6 Oy Ichida Arab Tilidagi Istalgan Kitobni O’qishni Boshlang!</h3>
-        <div class="badge-wrapper">
-          <div class="badge">Diqqat!</div>
+        <h1 class="fw-bold">
+          {{ "register-for" | translate }}
+        </h1>
+        <div class="swiper mySwiper-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex-column">
+              <img src="/assets/img/arabic_white.png" alt="header-image" />
+              <div>
+                <h3 class="text-center fw-bold">{{ "arabic" | translate }}</h3>
+                <p id="course_desc">
+                  {{ "arabic-desc" | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/img/english_white.png" alt="header-image" />
+              <div>
+                <h3 class="text-center fw-bold">{{ "english" | translate }}</h3>
+                <p id="course_desc">
+                  {{ "english-desc" | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/img/russian_white.png" alt="header-image" />
+              <div>
+                <h3 class="text-center fw-bold">{{ "russian" | translate }}</h3>
+                <p id="course_desc">
+                  {{ "russian-desc" | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/img/medicine_white.png" alt="header-image" />
+              <div>
+                <h3 class="text-center fw-bold">
+                  {{ "medicine" | translate }}
+                </h3>
+                <p id="course_desc">
+                  {{ "medicine-desc" | translate }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <p>Ushbu dasturga qabul qilinadigan o’quvchilar soni cheklangan!</p>
-        <p>Joy to’lmasidan tez quyidagi anketani to’ldiring.</p>
-        <p class="d-none">
-          Ushbu dasturga qabul qilinadigan o’quvchilar soni cheklangan!. Joy
-          to’lmasidan tez quyidagi anketani to’ldiring.
-        </p>
       </div>
       <div class="col-md-6">
-        <div class="form-card">
-          <form (submit)="postMessage()">
-            <div class="d-flex flex-column mb-4">
-              <label for="name">Ism</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Ismingiz"
-                [(ngModel)]="name"
-              />
-            </div>
-            <div class="d-flex flex-column mb-4">
-              <label for="phone">Telefon raqam</label>
-              <div class="position-relative">
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  placeholder="99 999 99 99"
-                  maxlength="12"
-                  #input
-                  (input)="phoneMask(input)"
-                  [(ngModel)]="phone"
-                />
-                <div class="phone-placeholder">+998</div>
-                <div class="svg-placeholder">
-                  <svg
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M19.3502 3.59142C14.922 -0.835446 7.74356 -0.834383 3.3167 3.59385C-1.11016 8.02209 -1.1091 15.2005 3.31913 19.6274C7.74737 24.0543 14.9258 24.0532 19.3527 19.625C21.4787 17.4983 22.6728 14.6141 22.6721 11.607C22.6715 8.60034 21.4766 5.71709 19.3502 3.59142ZM17.1674 16.0649C17.1669 16.0654 17.1664 16.0659 17.1659 16.0664V16.0626L16.5914 16.6333C15.8485 17.3856 14.7666 17.6951 13.7382 17.4495C12.7021 17.1722 11.7171 16.7308 10.8207 16.142C9.98784 15.6097 9.21601 14.9875 8.5192 14.2864C7.87806 13.65 7.30206 12.9511 6.79967 12.2003C6.25016 11.3924 5.81522 10.5124 5.50721 9.58514C5.15411 8.49587 5.44671 7.30061 6.26305 6.4976L6.93572 5.82493C7.12275 5.63707 7.42664 5.6364 7.61446 5.82343C7.61495 5.82391 7.61548 5.8244 7.61597 5.82493L9.73983 7.94879C9.92769 8.13582 9.92836 8.43971 9.74134 8.62753C9.74085 8.62802 9.74036 8.62851 9.73983 8.62904L8.49271 9.87615C8.13488 10.2301 8.08988 10.7925 8.38691 11.1989C8.83797 11.8179 9.33713 12.4004 9.87969 12.9411C10.4846 13.5486 11.1422 14.1012 11.8448 14.5926C12.2508 14.8757 12.8012 14.828 13.1524 14.4792L14.3579 13.2547C14.5449 13.0669 14.8488 13.0662 15.0367 13.2532C15.0371 13.2537 15.0376 13.2542 15.0382 13.2547L17.1658 15.3862C17.3537 15.5732 17.3544 15.877 17.1674 16.0649Z"
-                      fill="#BBBABB"
+        <div class="container">
+          <div class="row">
+            <div class="card">
+              <div class="card-body send-info-card">
+                <form (submit)="postMessage()">
+                  <div class="mb-3">
+                    <label
+                      for="exampleNam"
+                      class="form-label form-label-name"
+                      >{{ "name" | translate }}</label
+                    >
+                    <input
+                      type="text"
+                      id="exampleNam"
+                      class="form-control"
+                      aria-describedby="name"
+                      placeholder="{{ 'your-name' | translate }}"
+                      [(ngModel)]="name"
+                      name="name"
+                      required
                     />
-                  </svg>
-                </div>
+                  </div>
+                  <div class="mb-3 disabled-input position-relative">
+                    <label for="name" class="form-label form-label-phone">{{
+                      "phone" | translate
+                    }}</label>
+                    <div class="d-flex">
+                      <span
+                        class="input-group-text"
+                        id="basic-addon1"
+                        (click)="openCountryDropdown()"
+                      >
+                        {{ selectedCountry }}
+                      </span>
+                      <ng-select
+                        #ngSelect
+                        [items]="countries"
+                        bindValue="code"
+                        [placeholder]="'+998'"
+                        [(ngModel)]="selectedCountry"
+                        name="+998"
+                      >
+                        <div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name=""
+                            id=""
+                          />
+                          <ng-template ng-option-tmp let-item="item">
+                            <span class="text-dark"
+                              >{{ item.flag }} {{ item.code }}
+                              {{ item.name.ru }}</span
+                            >
+                          </ng-template>
+                        </div>
+                      </ng-select>
+                      <input
+                        type="text"
+                        class="form-control contact-number numb"
+                        id="exampleNumber"
+                        aria-describedby="name"
+                        [(ngModel)]="number"
+                        (keydown)="validateInput($event)"
+                        name="number"
+                        required
+                        appMask
+                        pattern="[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}"
+                      />
+                    </div>
+                    <small class="text-danger" *ngIf="error">
+                      {{ "error-message" | translate }}
+                    </small>
+                  </div>
+                  <label
+                    for="form-select"
+                    class="form-label form-label-branch"
+                    >{{ "branch" | translate }}</label
+                  >
+                  <select
+                    class="form-select mb-3"
+                    aria-label="Default select example"
+                    id="geolocation_select"
+                    [(ngModel)]="branch"
+                    name="branch"
+                    required
+                  >
+                    <option value="">{{ "choose-branch" | translate }}</option>
+                    <option value="Chorsu">{{ "chorsu" | translate }}</option>
+                    <option value="Kadisheva">
+                      {{ "kadisheva" | translate }}
+                    </option>
+                    <option value="Qatortol">
+                      {{ "qatortol" | translate }}
+                    </option>
+                    <option value="Sergeli">{{ "sergeli" | translate }}</option>
+                    <option value="Integro">{{ "integro" | translate }}</option>
+                  </select>
+                  <label
+                    for="type"
+                    class="mb-2"
+                    id="form-label-course"
+                    class="form-label-course form-label"
+                    >{{ "course" | translate }}</label
+                  >
+                  <select
+                    class="form-select mb-3"
+                    aria-label="Default select example"
+                    id="course_select"
+                    [(ngModel)]="course"
+                    name="course"
+                    required
+                  >
+                    <option value="">{{ "choose-course" | translate }}</option>
+                    <option value="Hamshiralik">
+                      {{ "medicine" | translate }}
+                    </option>
+                    <option value="Arab tili">
+                      {{ "arabic" | translate }}
+                    </option>
+                    <option value="Ingiliz tili">
+                      {{ "english" | translate }}
+                    </option>
+                    <option value="Rust tili">
+                      {{ "russian" | translate }}
+                    </option>
+                  </select>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="submit-button"
+                  >
+                    {{ "send" | translate }}
+                  </button>
+                </form>
               </div>
             </div>
-            <div class="dropdown-custom">
-              <label for="">Yaqin filialni tanlang</label>
-              <div
-                class="dropdown-custom-toggle dropdown-custom-placeholder"
-                (click)="toggleDropdown()"
-              >
-                Yaqin filialni tanlang
-                <svg
-                  width="23"
-                  height="24"
-                  viewBox="0 0 23 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.0111 2.74638C14.763 1.49737 13.102 0.80957 11.3352 0.80957C9.56834 0.80957 7.90828 1.49737 6.65827 2.74638C4.07983 5.3247 4.07983 9.52048 6.66583 12.1064L9.02317 14.4116C9.66093 15.0352 10.4981 15.347 11.3352 15.347C12.1723 15.347 13.0094 15.0352 13.6472 14.4116L16.0111 12.0988C17.2602 10.8498 17.949 9.18886 17.949 7.42212C17.949 5.65537 17.2602 3.99633 16.0111 2.74638ZM11.3352 10.248C9.76959 10.248 8.50068 8.97912 8.50068 7.41361C8.50068 5.84811 9.76959 4.57926 11.3352 4.57926C12.9008 4.57926 14.1697 5.84811 14.1697 7.41361C14.1697 8.97912 12.9008 10.248 11.3352 10.248ZM7.02014 15.0957L6.90487 15.9261H0.590575L1.02425 13.3979C1.25668 12.0421 2.18639 10.9632 3.409 10.5012C3.83323 11.5933 4.4861 12.5976 5.34495 13.4574L7.02014 15.0957ZM0.266499 17.8157H6.64126L5.85327 23.4844H3.77654C2.66353 23.4844 1.61194 22.9969 0.89292 22.1475C0.172961 21.2982 -0.134109 20.1814 0.049188 19.0836L0.266499 17.8157ZM14.3085 17.8157L15.0975 23.4844H7.76088L8.54887 17.8157H14.3085ZM22.0798 15.9261H15.9525L15.8146 14.935L17.3471 13.4357C18.1965 12.5863 18.8437 11.5896 19.2651 10.5031C20.4858 10.966 21.4137 12.0431 21.6461 13.3979L22.0798 15.9261ZM21.7774 22.1485C21.0575 22.9969 20.0068 23.4844 18.8938 23.4844H17.0041L16.2152 17.8157H22.4038L22.6202 19.0798C22.8035 20.1824 22.4974 21.2991 21.7774 22.1485Z"
-                    fill="#BBBABB"
-                  />
-                </svg>
-              </div>
-              <div class="dropdown-custom-menu">
-                <div
-                  class="dropdown-custom-item"
-                  (click)="selectOption('Chorsu')"
-                >
-                  Chorsu
-                </div>
-                <div
-                  class="dropdown-custom-item"
-                  (click)="selectOption('Kadisheva')"
-                >
-                  Kadisheva
-                </div>
-                <div
-                  class="dropdown-custom-item"
-                  (click)="selectOption('Qatortol')"
-                >
-                  Qatortol
-                </div>
-                <div
-                  class="dropdown-custom-item"
-                  (click)="selectOption('Sergeli')"
-                >
-                  Sergeli
-                </div>
-                <div
-                  class="dropdown-custom-item"
-                  (click)="selectOption('Integro')"
-                >
-                  Integro
-                </div>
-              </div>
-            </div>
-            <button>Ro'yxatdan o'tish</button>
-          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div
+  class="w-100 position-fixed"
+  *ngIf="show"
+  style="
+    min-height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    top: 0px;
+    z-index: 10000 !important;
+  "
+>
+  <div class="modal d-block w-100 show" id="staticBackdrop">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center">
+          <h3 class="mb-0 modal-badge">Savodschool</h3>
+        </div>
+        <div
+          class="modal-body d-flex flex-column align-items-center justify-content-center"
+        >
+          <h5 class="mb-2 text-center">{{ "message" | translate }}</h5>
+          <svg
+            width="115px"
+            height="115px"
+            viewBox="0 0 133 133"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              id="check-group"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <circle
+                id="filled-circle"
+                fill="#05AD4C"
+                cx="66.5"
+                cy="66.5"
+                r="54.5"
+              />
+              <circle
+                id="white-circle"
+                fill="#FFFFFF"
+                cx="66.5"
+                cy="66.5"
+                r="55.5"
+              />
+              <circle
+                id="outline"
+                stroke="#05AD4C"
+                stroke-width="4"
+                cx="66.5"
+                cy="66.5"
+                r="54.5"
+              />
+              <polyline
+                id="check"
+                stroke="#FFFFFF"
+                stroke-width="5.5"
+                points="41 70 56 85 92 49"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-primary w-100 btn-lg"
+            (click)="show = false"
+          >
+            Ok
+          </button>
         </div>
       </div>
     </div>

@@ -1,344 +1,149 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0px;
-}
-
-.content {
-  font-family: "SF UI Display", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-style: normal;
-  background: url("/assets/img/bg.png") no-repeat center center fixed;
-  background-size: cover;
+section {
+  padding-top: 200px;
   min-height: 100vh;
-  padding-top: 40px;
+  background: rgb(5, 173, 76);
+  background: -moz-linear-gradient(
+    52deg,
+    rgba(23, 0, 70, 1) 0%,
+    rgb(5, 173, 76) 100%
+  );
+  background: -webkit-linear-gradient(
+    52deg,
+    rgba(23, 0, 70, 1) 0%,
+    rgb(5, 173, 76) 100%
+  );
+  background: linear-gradient(
+    52deg,
+    rgba(23, 0, 70, 1) 0%,
+    rgb(5, 173, 76) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#170046",endColorstr="#5d2305",GradientType=1);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: #fff !important;
+  }
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.card {
+  border-radius: 10px;
+  border-color: #05ad4c !important;
+  border-width: 2px !important;
+  height: 500px !important;
+  max-height: 500px;
+  &-body {
+    padding: 20px !important;
+  }
 }
 
-nav img {
-  width: 200px;
+.swiper {
+  width: 100%;
+  height: 40vh !important;
+  max-height: 40vh;
 }
 
-nav h5 {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 38px;
-  color: #005533;
-  margin-left: 5px;
-}
-
-h5.text-center {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
+.swiper-slide {
   text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.details {
-  margin-top: 70px !important;
-}
-
-.details .col-md-6 h3 {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 57px;
-  color: #ffffff;
-  padding-top: 80px;
-  padding-bottom: 20px;
-}
-
-.details .col-md-6 .badge {
-  padding: 5px 10px;
-  background: #ff0000;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.details .col-md-6 p:nth-child(3) {
-  margin-bottom: 0px;
-}
-
-.details .col-md-6 p {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  color: #ffffff;
-}
-
-.form-card {
-  background: #ffffff;
-  border: 2px solid #00ab4f;
-  border-radius: 55px;
-  padding: 75px 60px;
-}
-
-.form-card input {
-  padding: 10px 20px;
-  background: #f2f2f2;
-  border-radius: 10px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 29px;
-  height: 65px;
-  border: 1px solid transparent;
-  outline: none !important;
-  transition: 0.2s ease;
-}
-
-.form-card input:focus,
-.form-card input:active {
-  border-color: #00ab4f !important;
-}
-
-.form-card .d-flex.flex-column:nth-child(2) input {
-  padding-left: 75px;
-  position: relative;
-  width: 100%;
-}
-
-.form-card .svg-placeholder {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 30px;
-  transform: translateY(-50%);
-  color: #000000;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 29px;
-  user-select: none;
-}
-
-.form-card .phone-placeholder {
-  display: block;
-  position: absolute;
-  left: 20px;
-  top: 32px;
-  transform: translateY(-50%);
-  color: #000000;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 29px;
-  user-select: none;
-}
-
-.form-card label {
-  font-weight: 500;
-  font-size: 19px;
-  line-height: 33px;
-  color: #000000;
-  margin-left: 10px;
-}
-
-.form-card label::after {
-  content: "*";
-  color: #ff0000;
-}
-
-.form-card input::placeholder {
-  color: #a3a2a4b3;
-}
-
-.dropdown-custom {
-  position: relative;
-  width: 100%;
-}
-
-.dropdown-custom-toggle {
-  padding: 10px 20px;
-  cursor: pointer;
+  font-size: 18px;
+  background: transparent;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  user-select: none;
-  background: #f2f2f2;
-  border-radius: 10px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 29px;
-  height: 65px;
-  border: 1px solid transparent;
-  transition: 0.2s ease;
+  flex-direction: column;
+  min-height: 40vh !important;
+  div {
+    width: 70%;
+  }
 }
 
-.dropdown-custom-toggle:hover {
-  border-color: #00ab4f !important;
+.swiper-slide img {
+  display: block;
+  width: 400px !important;
 }
 
-.dropdown-custom-toggle::after {
-  font-size: 12px;
-  margin-left: 10px;
+.section {
+  background-color: #170046;
 }
 
-.dropdown-custom-toggle.toggled {
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+.col-md-6:first-child {
+  h1 {
+    padding: 0px 40px;
+  }
 }
 
-.dropdown-custom-toggle.selected {
-  border-color: #00ab4f !important;
+.gradient-background {
+  background: linear-gradient(280deg, #8ddfb1, #10b654, #2abf6a, #2bc86e);
+  background-size: 240% 240%;
+  animation: gradient-animation 36s ease infinite;
 }
 
-.dropdown-custom-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
+button {
   width: 100%;
-  background: white;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  border-radius: 50px !important;
+  padding: 7px 0px;
+  font-size: 1.6rem;
 }
 
-.dropdown-custom-menu.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.input-group-text {
+  z-index: 999 !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 
-.dropdown-custom-item {
-  padding: 10px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.dropdown-custom-item:hover {
-  background: #00ab4f;
-  color: white;
-}
-
-.dropdown-custom-placeholder {
-  color: #a3a2a4b3;
-}
-
-.form-card button {
-  background: #00ab4f;
-  border: 1.8px solid #ffffff;
-  box-shadow: 0.872109px 3.48844px 4.36054px rgba(0, 0, 0, 0.25);
-  border-radius: 18px;
-  padding: 15px 0px;
-  width: 100%;
-  margin-top: 30px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 38px;
-  color: #ffffff;
-}
-
-input.error {
-  border-color: red !important;
-  animation: shatter 0.3s ease-in-out;
-}
-
-.dropdown-custom-toggle.error {
-  border-color: red !important;
-  animation: shatter 0.3s ease-in-out;
-}
-
-.w-80 {
-  width: 80%;
-  margin: 0 auto;
-}
-
-@keyframes shatter {
+@keyframes gradient-animation {
   0% {
-    transform: translateX(0);
+    background-position: 0% 50%;
   }
-  20% {
-    transform: rotate(-5deg) translateX(-3px);
-  }
-  40% {
-    transform: rotate(5deg) translateX(3px);
-  }
-  60% {
-    transform: rotate(-3deg) translateX(-2px);
-  }
-  80% {
-    transform: rotate(3deg) translateX(2px);
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    transform: translateX(0);
+    background-position: 0% 50%;
   }
 }
 
-@media screen and (max-width: 480px) {
-  nav img {
-    width: 120px !important;
+@media screen and (max-width: 500px) {
+  section {
+    padding-top: 100px;
   }
 
-  nav h5 {
-    font-size: 18px !important;
+  .swiper {
+    min-height: auto !important;
   }
 
-  .content {
-    padding-top: 60px;
+  .row {
+    flex-direction: column-reverse !important;
+  }
+  .col-md-6:first-child {
+    h1 {
+      width: 100%;
+      padding: 0px 0px;
+      text-align: center;
+    }
   }
 
-  .content svg {
-    width: 20px !important;
-    height: 24px !important;
+  .swiper-slide {
+    padding: 40px 15px 0px 15px;
+    img {
+      width: 100% !important;
+    }
   }
 
-  h5.text-center {
-    font-size: 19px;
-    font-weight: normal;
-    padding-top: 40px;
+  .card {
+    margin-bottom: 20px;
   }
 
-  .w-80 {
-    width: 100%;
-  }
-
-  .details .col-md-6 h3 {
-    font-size: 34px;
-    line-height: normal;
-    text-align: center;
-    padding-top: 0px;
-  }
-
-  .badge-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .details .col-md-6 p:not(.d-none) {
-    display: none;
-  }
-
-  .details .col-md-6 p:is(.d-none) {
-    display: block !important;
-    text-align: center;
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .details {
-    margin-top: 30px !important;
-  }
-
-  .form-card {
-    padding: 45px 40px;
-    margin-bottom: 80px;
+  .swiper-slide {
+    display: block;
+    img {
+      margin-bottom: 30px;
+    }
+    div {
+      width: 100%;
+    }
   }
 }
